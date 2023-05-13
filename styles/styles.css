@@ -1,0 +1,132 @@
+* {
+  font-family: ubuntu;
+  font-size: 1.005rem;
+}
+
+
+body {
+  /* background-color: #E8E8E8; */
+  background-image: linear-gradient(to left bottom, #ffffff, #f4f7f9, #e7f0f1, #dee8e3, #dcdfd3);
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  display: inline-block;
+  height: 3rem;
+  /* padding: rem; */
+  border: 1px solid black;
+  background-color: transparent;
+  color: black ;
+  border-radius: 2px;
+  width: 70%;
+  margin-bottom: 2rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+button::before {
+  content: '';
+  display: inline-block;
+  background-color: lightgreen;
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+  /* border-radius: 50px; */
+  transition: 200ms ease-in;
+}
+
+.clicked {
+  background-color: lightgreen;
+
+}
+
+.cols {
+  border: .1px dotted grey;
+}
+button:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+button:active {
+  /* background-color: black; */
+}
+
+h1 {
+  color: black;
+  font-family: ubuntu, sans-serif;
+  font-size: 3.4rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.board {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .flex-row {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+} */
+
+.grids{
+  display: grid;
+  /* background-color: #0f0e0e; */
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid black
+  /* grid-template-columns: repeat(6, 1fr);
+  grid-row-columns: repeat(auto, 1fr); */
+}
+
+.child-one {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.hoverDivs {
+  height: inherit;
+}
+.parentContainer {
+  width: 70%;
+  height: 85vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sizes {
+  border: 1px solid lightgreen;
+  border-radius: 3px;
+  padding: 10px;
+  width: 70%;
+  /* height: inherit; */
+  text-align: center;
+  color: lightgreen;
+  margin-bottom: 30px;
+}
+
+.slider {
+  display: inline-block;
+  background-color: lightgreen;
+}
